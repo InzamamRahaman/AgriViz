@@ -22,16 +22,20 @@
     <Content Include="index.html" />
     <Content Include="jquery.js" />
     <Content Include="jquery.widget.js" />
+    <Content Include="line charts.html" />
     <Content Include="lodash.js" />
     <Content Include="metro-bootstrap-responsive.css" />
     <Content Include="metro-bootstrap.css" />
     <Content Include="metro.min.js" />
+    <Content Include="nvd3.min.css" />
+    <Content Include="nvd3.min.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="nvd3.min" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

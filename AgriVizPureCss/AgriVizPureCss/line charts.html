@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+
+    <!-- Place stylesheets here -->
+
+    <link rel="stylesheet" href="metro-bootstrap.css" />
+    <link rel="stylesheet" href="metro-bootstrap-responsive.css" />
+    <link rel="stylesheet" href="iconFonts.css" />
+    <link rel="stylesheet" href="nvd3.min.css" />
+
+    <!-- Place scripts here -->
+    <script src="lodash.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery.widget.js"></script>
+    <script src="metro.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="nvd3.min.js"></script>
+
+</head>
+<body class="metro">
+
+    <!-- Code to manage page here temporarily  -->
+    
+
+
+
+    <!-- Code for the navigation goes here -->
+    <nav class="navigation-bar dark">
+
+        <nav class="navigation-bar-content">
+
+            <a href="#" class="element">HOME</a>
+            <ul class="element-menu">
+                <li><a class="element" href="#">LINE GRAPHS</a></li>
+                <li><a class="element" href="#">PIE GRAPHS</a></li>
+                <li><a class="element" href="#">BAR GRAPHS</a></li>
+
+            </ul>
+
+        </nav>
+
+    </nav>
+
+    <script>
+        var host_name = "http://127.0.0.1:5000/"
+        var monthly_commodity_names_url = host_name + "crops/monthly/commodity/"
+
+        var xhr = new XMLHttpRequest({ mozSystem: true })
+
+        xhr.onreadystatechange = function()
+        {
+            if(xhr.readyState == 4)
+            {
+                console.log(xhr.responseText)
+            }
+        }
+
+        xhr.open('GET', monthly_commodity_names_url, true)
+        xhr.send()
+
+
+    // Firstly, we need to be able to get the names of all of the crops we can plant
+
+    </script>
+
+    <!-- Sidebar to hold commodity names -->
+    <div class="span3">
+        <nav class="sidebar dark">
+            <ul id="commodity_names">
+                <li class="title">SELECT CROPS HERE</li>
+            </ul>
+        </nav> 
+    </div>
+
+
+
+   
+</body>
+</html>
